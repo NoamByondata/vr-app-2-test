@@ -16,5 +16,5 @@ echo 'Downloading Android package from http://download.unity3d.com/download_unit
 curl -o Android.pkg http://download.unity3d.com/download_unity/b7e030c65c9b/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-5.4.4f1.pkg
 
 echo 'Installing Android.pkg'
-sudo installer -package Android.pkg -target /
+sudo installer -pkg Android.pkg -target /
 
