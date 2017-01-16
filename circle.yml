@@ -5,5 +5,5 @@ dependencies:
   pre:
     - "./Scripts/install.sh"
 compile:
-  override:
-	- "./Scripts/build.sh"
+	override:
+  	- "./Scripts/build.sh"
