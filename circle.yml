@@ -3,7 +3,7 @@ machine:
     version: 8.0
 dependencies:
   pre:
-    ./Scripts/install.sh
+  ./Scripts/install.sh
 compile:
-	override:
-		./Scripts/build.sh
+  override:
+    ./Scripts/build.sh
