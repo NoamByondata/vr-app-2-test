@@ -1,16 +1,28 @@
 language: objective-c
 cache: bundler
 osx_image: xcode8.2
-rvm:
-    - 2.1.2
+rvm: 2.1.2
+android:
+  components:
+	- tools
+	- tools
+	- platform-tools
+	- build-tools-$ANDROID_BUILD_TOOLS_VERSION
+	- android-$ANDROID_API_LEVEL
+env:
+	global:
+		- ANDROID_API_LEVEL=24
+		- EMULATOR_API_LEVEL=21
+		- ANDROID_BUILD_TOOLS_VERSION=24.0.1
+
 install:
-    - "./Scripts/install.sh"
+	- "./Scripts/install.sh"
 script:
-    - "./Scripts/build.sh"
+	- "./Scripts/build.sh"
 deploy:
-    provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: travis-build-test
-    skip_cleanup: true
-    acl: public_read
+	provider: s3
+	access_key_id: $AWS_ACCESS_KEY_ID
+	secret_access_key: $AWS_SECRET_ACCESS_KEY
+	bucket: travis-build-test
+	skip_cleanup: true
+	acl: public_read
