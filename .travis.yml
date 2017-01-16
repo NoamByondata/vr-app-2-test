@@ -1,6 +1,5 @@
 language: objective-c
-cache:
-    - bundler
+cache: bundler
 osx_image: xcode8.2
 rvm:
     - 2.1.2
