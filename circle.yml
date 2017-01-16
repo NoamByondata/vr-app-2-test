@@ -4,6 +4,3 @@ machine:
 dependencies:
   pre:
   ./Scripts/install.sh
-compile:
-  override:
-    ./Scripts/build.sh
