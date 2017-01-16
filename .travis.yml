@@ -14,4 +14,3 @@ deploy:
         bucket: travis-build-test
         skip_cleanup: true
         acl: public_read
-
