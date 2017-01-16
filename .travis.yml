@@ -7,10 +7,9 @@ install:
 script:
 - "./Scripts/build.sh"
 deploy:
-  provider: s3
-  access_key_id: AKIAJLPKQZT74NXUW75A
-  secret_access_key:
-    secure: hW6R5V0RVSHdsVlQgGLPoylO+mmifimY5Vbt6ALakYed+fnUdUnNIBPjxGhbgpBPys7MCaYKCpFCgwit92fafACYIVyG1Up5hCCvyYPCBsfB782i2HP8e+RTN7/B5N/vXVAzNU2errckrcMxLbDmp7wEIYrdjN5hKZUv4qCbIeRjmdy69quo9IG+wes7vo6tKKdMjZwpkqGu5pw1/Tdm2f4Dn5mf8FqQdMRkLCx/XigcIn9vc4K3aqJiX1q1aFkGcy8TPL0uMQMG2jeJHlvKpLrEwzCuSRZAYIyvk6adkZjBPqA/f24tlHKzXwA8Mg2bA+O5RnndXIvEse3WT7cLwijI4E3VT76FFyFf2WXYd7wKG6atxxcvBa8Yfj+dDEMZDNBMeupKoAv23fCe6l4hRAQAeoJI4M1z+nJ5NzJQXVra5OAz0NEEqcfFIy6WqW2VI4rTcHOvYmbJZp7nvJwi/NEu1y/9BfS9g7nXcQrRIDHlT2Bry/eNR8i+85xJT2jQQdbv0w4RfJJo120poA6HgKYEJAwbCp0pRrLKaDot8UCZj2fp8wjcQeYfrk8wfhafe7499zy/O11U/w2H/mElg4mO+RC3nQF6zHkwNXibx7hEk/feVPu/bfMvRcbfnVl1w60c67+a1r4vEFsjqMV6skvS67c4U6RisW96n/q/9mM=
-  bucket: travis-build-test
-  skip_cleanup: true
-  acl: public_read
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: travis-build-test
+    skip_cleanup: true
+    acl: public_read
